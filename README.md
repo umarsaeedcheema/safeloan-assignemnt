@@ -56,18 +56,18 @@ An online platform that connects students with teachers. Students can log in to 
 
 
 ## Folder Structure : 
+```
 src/
 ├── app/
 │   ├── layout.tsx                  # Root layout component
 │   ├── page.tsx                    # Home page with authentication check
 │   ├── login/page.tsx              # Student login page
-│   ├── signup/page.tsx             # Optional student sign-up page
 │   └── student-dashboard/page.tsx  # Dashboard displaying teacher cards
 ├── components/
 │   └── TeacherCard.tsx             # Component for displaying teacher details
 ├── firebase-config.js              # Firebase configuration
 └── globals.css                     # Global CSS styles
-
+```
 
 ## Usage
 
