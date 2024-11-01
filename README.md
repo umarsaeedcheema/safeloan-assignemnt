@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Student-Teacher Booking App
 
-## Getting Started
+An online platform that connects students with teachers. Students can log in to view available teachers, while teachers can log in to view their students.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
+- [Folder Structure](#folder-structure)
+- [Usage](#usage)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Student Login and Dashboard**: Students can log in to view a list of available teachers.
+- **Teacher Cards**: Each teacher is displayed on a card with their name, subject, and a "Book Class" button (non-functional for now).
+- **Authentication with Firebase**: Secure authentication for both students and teachers.
+- **Sign-Up Option**: Users can sign up with an email and password to create an account.
+- **Logout Functionality**: Authenticated users can log out, which ends their session on Firebase.
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js** (with App Router)
+- **Firebase** (Authentication)
+- **React** (with functional components and hooks)
+- **Material-UI** (for styling the components)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Setup and Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Prerequisites
 
-## Deploy on Vercel
+- [Node.js](https://nodejs.org/) installed on your local machine
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation Steps
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/umarsaeedcheema/safeloan-assignemnt.git
+   cd safeloan-assignment
+   ```
+
+2. **Install Dependencies** :
+    ```bash
+    npm install
+    ```
+3. Run the Application:
+    ```bash
+    npm run dev
+    ```
+4. Access the Application:
+
+    Open http://localhost:3000 in your browser.
+
+
+## Folder Structure : 
+src/
+├── app/
+│   ├── layout.tsx                  # Root layout component
+│   ├── page.tsx                    # Home page with authentication check
+│   ├── login/page.tsx              # Student login page
+│   ├── signup/page.tsx             # Optional student sign-up page
+│   └── student-dashboard/page.tsx  # Dashboard displaying teacher cards
+├── components/
+│   └── TeacherCard.tsx             # Component for displaying teacher details
+├── firebase-config.js              # Firebase configuration
+└── globals.css                     # Global CSS styles
+
+
+## Usage
+
+### Logging In as a Student
+
+1. Go to `/login` to access the student login page.
+2. Enter the student credentials:
+   - **Email**: `student@example.com`
+   - **Password**: `password123`
+3. Upon successful login, you’ll be redirected to the dashboard where you can view all teachers.
+
+### Logging Out
+
+1. While on the dashboard, click the **Logout** button.
+2. You will be signed out and redirected to the login page.
